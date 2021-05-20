@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /django/new_chatapp/fundoo
+    destination: /django/new_chatapp
 hooks:
   AfterInstall:
     - location: scripts/fundoo.sh
