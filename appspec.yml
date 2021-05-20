@@ -3,8 +3,6 @@ os: linux
 files:
   - source: /
     destination: /django/new_chatapp/fundoo
-  - source: /fundoo.service
-    destination: /etc/systemd/system/
 hooks:
   AfterInstall:
     - location: /scripts/start_server.sh
