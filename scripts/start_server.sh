@@ -1,6 +1,6 @@
 #!/bin/bash
 	
 sudo systemctl daemon-reload
-sudo systemctl start fundoo.service
-sudo systemctl enable fundoo.service
+sudo systemctl start fundoo
+sudo systemctl enable fundoo
 
