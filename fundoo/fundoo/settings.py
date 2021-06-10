@@ -97,9 +97,7 @@ CHANNEL_LAYERS = {
     },
 }
 
-import pymysql
 
-pymysql.install_as_MySQLdb()
 
 
 # Database
