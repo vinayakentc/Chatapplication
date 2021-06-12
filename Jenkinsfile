@@ -14,17 +14,17 @@ pipeline {
           }
     	}
     	
-	  stage('Code Analysis') {
+	stage('Code Analysis') {
 		  
-		  environment {
-		scannerHome = tool 'sonar-scanner';
+             environment {
+	     scannerHome = tool 'sonar-scanner';
 	          }
-		  steps {
-		    withSonarQubeEnv('SonarQube') {
-		    sh "${scannerHome}/opt/sonar-scanner/bin/sonar-scanner"
+	  steps {
+	     withSonarQubeEnv('SonarQube') {
+             sh "${scannerHome}/opt/sonar-scanner/bin/sonar-scanner"
 "
-		  }
-		}
+           }
+	}
 	}
 
 
