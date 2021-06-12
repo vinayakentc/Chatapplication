@@ -18,7 +18,7 @@ pipeline {
 		  
 	  steps {
 	     withSonarQubeEnv('SonarQube') {
-             sh "/opt/sonar-scanner/sonar-scanner-4.6.2.2472-linux"
+             sh "/opt/sonar-scanner"
 
            }
 	}
