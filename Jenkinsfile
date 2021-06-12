@@ -4,7 +4,7 @@
 pipeline {
   agent any
   stages {
-        stage('Cloning Git') { 
+        stage('SCM Checkout') { 
           steps {
             git 'https://github.com/vinayakentc/Chatapplication'
           }
