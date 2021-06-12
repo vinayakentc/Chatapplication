@@ -16,8 +16,8 @@ pipeline {
     	
 	  stage('Code Analysis') {
 		  steps {
-		    withSonarQubeEnv('SonarQube') {
-		    sh "/opt/sonar-scanner/bin/sonar-scanner"
+		    withSonarQubeEnv('sonar-scanner') {
+		    sh "${scannerHome}/bin/sonar-scanner"
 		  }
 		}
 	}
