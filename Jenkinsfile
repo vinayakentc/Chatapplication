@@ -1,10 +1,9 @@
 
 
-
 pipeline {
   agent any
   stages {
-        stage('SCM Checkout') { 
+        stage('Cloning Git') { 
           steps {
             git 'https://github.com/vinayakentc/Chatapplication'
           }
@@ -15,7 +14,17 @@ pipeline {
           }
     	}
     	
-        
+        stage('Code Analysis') {
+	        environment {
+		    scannerHome = tool 'sonar_scanner';
+	    }
+		  steps {
+		    withSonarQubeEnv('SonarQube') {
+		    sh "/opt/sonar_scanner"
+		  }
+		}
+	}
+
 
     	stage('Build') { 
           steps{ 
@@ -25,5 +34,3 @@ pipeline {
     	}
   }
  }
-	  
-	  
