@@ -1,5 +1,7 @@
 import os
 
+import pymysql
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -97,6 +99,7 @@ CHANNEL_LAYERS = {
     },
 }
 
+pymysql.install_as_MySQLdb()
 
 
 
