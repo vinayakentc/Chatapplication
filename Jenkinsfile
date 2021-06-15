@@ -14,6 +14,15 @@ pipeline {
           }
     	}
     	
+    	stage('Code Analysis') {
+
+	      steps {
+	        withSonarQubeEnv('SonarQube') {
+             sh "/opt/sonar-scanner/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner"
+
+           }
+	}
+	}
 
     	stage('Build') { 
           steps{ 
